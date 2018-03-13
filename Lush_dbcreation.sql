@@ -36,8 +36,7 @@ CREATE TABLE Product(
 	IngredientID int NOT NULL,
 	ProductName varchar(50) NOT NULL,
 	ProductCategory varchar(50) NOT NULL,
-	ProductNumber int NOT NULL,
-	ListPrice float NOT NULL);
+	ProductNumber int NOT NULL);
 	
 
 CREATE TABLE Ingredients(
@@ -66,8 +65,8 @@ INSERT INTO Sales(SaleID, CustomerID, EmployeeID, ProductID, SalesTotal, SaleDat
 (2, 5, 3, 5, 240, '2017-05-12 08:43:12.000', 12) 
 (3, 1, 3, 4, 402, '2018-01-20 08:43:12.000', 13)
 (4, 3, 8, 9, 4202, '2018-03-10 08:43:12.000', 2)
-(5,)
-(6,)
+(5, 6, 2, 3, 124, '2018-03-10 08:43:12.000', 3)
+(6, 10, 9, 2, 231, '2018-03-10 08:43:12.000',1)
 (7,)
 (8,)
 (9,)
@@ -79,7 +78,7 @@ INSERT INTO Customers(CustomerID, FirstName, LastName, CustomerAddress, PhoneNum
 INSERT INTO Employees(EmployeeID, FirstName, LastName, Title, DateHired, Age) values
 ()
 
-INSERT INTO Product(ProductID, IngredientID, ProductName, ProductCategory, ProductNumber, ListPrice) values
+INSERT INTO Product(ProductID, IngredientID, ProductName, ProductCategory, ProductNumber) values
 ()
 
 INSERT INTO Ingredients(IngredientID, IngredientsName, Supplier, Price) values
