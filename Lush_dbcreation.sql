@@ -79,7 +79,16 @@ INSERT INTO Employees(EmployeeID, FirstName, LastName, Title, DateHired, Age) va
 (1, 'Chris', 'Post', 'Sales Representative')
 
 INSERT INTO Product(ProductID, IngredientID, ProductName, ProductCategory, ProductNumber) values
-()
+(001, 972, Dark Angels, 12, 77889900)
+(062, 543, Mask of Managmity,3, 23498740)
+(123, 308, Ocean Salt, 12, 76584937) 
+(123, 100, Ocean Salt, 12, 76584937)
+(123, 876, Ocean Salt, 12, 76584937) 
+(067, 972, Ugai Mouthwash Tab, 5, 12789320) 
+(856, 100, Oatafix, 3, 07964210) 
+(098, 456, Beautiful Day Shower Gel, 1, 56420891) 
+(309, 456, Charity Pot Lotion, 2, 34097516) 
+(045, 230, Hottie Body Bar, 3, 12095648
 
 INSERT INTO Ingredients(IngredientID, IngredientsName, Supplier, Price) values
 ()
