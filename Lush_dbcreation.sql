@@ -23,7 +23,7 @@ CREATE TABLE Customers(
 
 
 CREATE TABLE Employees(
-	EmployeeID int NOT NULL PRIMARY KEY,
+	EmployeeID int PRIMARY KEY,
 	FirstName varchar(50) NOT NULL,
 	LastName varchar(50) NOT NULL,
 	Title varchar(50) NOT NULL,
@@ -63,20 +63,20 @@ GO
 INSERT INTO Sales(SaleID, CustomerID, EmployeeID, ProductID, SalesTotal, SaleDate, OrderQuantity) values
 (1, 1, 1, 1, 32, '2016-03-04 08:43:12.000', 4),
 (2, 5, 3, 5, 240, '2017-05-12 08:43:12.000', 12), 
-(3, 1, 3, 4, 402, '2018-01-20 08:43:12.000', 13),
+(3, 1, NULL, 4, 402, '2018-01-20 08:43:12.000', 13),
 (4, 3, 8, 9, 4202, '2018-03-10 08:43:12.000', 2),
-(5, 6, 2, 3, 124, '2018-03-10 08:43:12.000', 3),
-(6, 10, 9, 2, 231, '2018-03-10 08:43:12.000',1),
+(5, 6, NULL, 3, 124, '2018-03-10 08:43:12.000', 3),
+(6, 10, NULL, 2, 231, '2018-03-10 08:43:12.000',1),
 (7, 7, 4, 10, 134, '2018-03-10 08:43:12.000', 5),
-(8, 2, 10, 7, 53, '2018-03-10 08:43:12.000', 2),
-(9, 8, 5, 8, 121, '2018-03-10 08:43:12.000', 3),
-(10, 9, 7, 6, 147, '2018-03-10 08:43:12.000', 4);
+(8, 2, NULL, 7, 53, '2018-03-10 08:43:12.000', 2),
+(9, 8, NULL, 8, 121, '2018-03-10 08:43:12.000', 3),
+(10, 9, NULL, 6, 147, '2018-03-10 08:43:12.000', 4);
 
 INSERT INTO Customers(CustomerID, FirstName, LastName, CustomerAddress, PhoneNumber, CreditCardNumber) values
 ()
 
 INSERT INTO Employees(EmployeeID, FirstName, LastName, Title, DateHired, Age) values
-()
+(1, 'Chris', 'Post', 'Sales Representative')
 
 INSERT INTO Product(ProductID, IngredientID, ProductName, ProductCategory, ProductNumber) values
 ()
