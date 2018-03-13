@@ -61,3 +61,6 @@ ALTER TABLE Product ADD CONSTRAINT FK_Product_Ingredient
 FOREIGN KEY (IngredientID) REFERENCES Ingredients(IngredientID);
 
 GO
+
+INSERT INTO Sales(SaleID, CustomerID, EmployeeID, ProductID, SalesTotal, SaleDate, OrderQuantity) values
+(1, 1, 1, 1, 32, '2015-01-01 08:53:56.000', 4)
