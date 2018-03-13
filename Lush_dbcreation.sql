@@ -88,7 +88,7 @@ INSERT INTO Product(ProductID, IngredientID, ProductName, ProductCategory, Produ
 (856, 100, Oatafix, 3, 07964210) 
 (098, 456, Beautiful Day Shower Gel, 1, 56420891) 
 (309, 456, Charity Pot Lotion, 2, 34097516) 
-(045, 230, Hottie Body Bar, 3, 12095648
+(045, 230, Hottie Body Bar, 3, 12095648)
 
 INSERT INTO Ingredients(IngredientID, IngredientsName, Supplier, Price) values
 ()
