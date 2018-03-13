@@ -47,7 +47,6 @@ CREATE TABLE Ingredients(
 	Price float NOT NULL);
 	
 
-
 ALTER TABLE Sales ADD CONSTRAINT FK_Sales_Customer 
 FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID);
 
@@ -63,4 +62,25 @@ FOREIGN KEY (IngredientID) REFERENCES Ingredients(IngredientID);
 GO
 
 INSERT INTO Sales(SaleID, CustomerID, EmployeeID, ProductID, SalesTotal, SaleDate, OrderQuantity) values
-(1, 1, 1, 1, 32, '2015-01-01 08:53:56.000', 4)
+(1, 1, 1, 1, 32, '2016-03-04 08:43:12.000', 4)
+(2, 5, 3, 5, 240, '2017-05-12 08:43:12.000', 12) 
+(3, 1, 3, 4, 402, '2018-01-20 08:43:12.000', 13)
+(4, 3, 8, 9, 4202, '2018-03-10 08:43:12.000', 2)
+(5,)
+(6,)
+(7,)
+(8,)
+(9,)
+(10,)
+
+INSERT INTO Customers(CustomerID, FirstName, LastName, CustomerAddress, PhoneNumber, CreditCardNumber) values
+()
+
+INSERT INTO Employees(EmployeeID, FirstName, LastName, Title, DateHired, Age) values
+()
+
+INSERT INTO Product(ProductID, IngredientID, ProductName, ProductCategory, ProductNumber, ListPrice) values
+()
+
+INSERT INTO Ingredients(IngredientID, IngredientsName, Supplier, Price) values
+()
