@@ -1,7 +1,7 @@
-﻿CREATE DATABASE LushCosmetics;
+﻿CREATE DATABASE LushCosmeticsDB;
 GO
 
-USE LushCosmetics;
+USE LushCosmeticsDB;
 GO
 
 CREATE TABLE Sales(
@@ -61,4 +61,3 @@ ALTER TABLE Product ADD CONSTRAINT FK_Product_Ingredient
 FOREIGN KEY (IngredientID) REFERENCES Ingredients(IngredientID);
 
 GO
-
