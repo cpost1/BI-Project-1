@@ -60,17 +60,29 @@ FOREIGN KEY (IngredientID) REFERENCES Ingredients(IngredientID);
 
 GO
 
-INSERT INTO Sales(SaleID, CustomerID, EmployeeID, ProductID, SalesTotal, SaleDate, OrderQuantity) values
-(1, 1, 1, 1, 32, '2016-03-04 08:43:12.000', 4),
-(2, 2, 2, 2, 240, '2017-05-12 08:43:12.000', 12), 
-(3, 3, NULL, 3, 402, '2018-01-20 08:43:12.000', 13),
-(4, 4, 4, 4, 4202, '2018-03-10 08:43:12.000', 2),
-(5, 5, NULL, 5, 124, '2018-03-10 08:43:12.000', 3),
-(6, 6, NULL, 6, 231, '2018-03-10 08:43:12.000',1),
-(7, 7, 7, 7, 134, '2018-03-10 08:43:12.000', 5),
-(8, 8, NULL, 8, 53, '2018-03-10 08:43:12.000', 2),
-(9, 9, NULL, 9, 121, '2018-03-10 08:43:12.000', 3),
-(10, 10, NULL, 10, 147, '2018-03-10 08:43:12.000', 4);
+INSERT INTO Ingredients(IngredientID, IngredientsName, Supplier, Price) values
+(1, 'Coconut_Oil', 'CocoMart', 0.80),
+(2, 'Olive_Oil', 'OliveHeaven', 0.70),
+(3, 'Palm_Oil', 'PalmEmporium', 0.93),
+(4, 'Shea_Butter', 'SheaValue', 0.43),
+(5, 'Almond_Butter', 'AlmondNutz', 0.23),
+(6, 'Vanilla', 'VanillaCity', 0.17),
+(7, 'Sodium_Hydroxide', 'Chemixx', 0.02),
+(8, 'Sugar', 'SweetDeal', 0.12),
+(9, 'Cactus', 'Spikebucks', 0.66),
+(10, 'Magic', 'GrandIllusion', 0.88);
+
+INSERT INTO Product(ProductID, IngredientID, ProductName, ProductCategory, ProductNumber) values
+(1, 1, 'Dark Angels', 12, 700),
+(2, 2, 'Mask of Managmity',3, 234),
+(3, 3, 'Ocean Salt', 12, 765),
+(4, 4, 'Ocean Salt', 12, 765),
+(5, 5, 'Ocean Salt', 12, 765),
+(6, 6, 'Ugai Mouthwash Tab', 5, 127),
+(7, 7, 'Oatafix', 3, 07964210),
+(8, 8, 'Beautiful Day Shower Gel', 1, 564),
+(9, 9, 'Charity Pot Lotion', 2, 340),
+(10, 10, 'Hottie Body Bar', 3, 120);
 
 INSERT INTO Customers(CustomerID, FirstName, LastName, CustomerAddress, PhoneNumber, CreditCardNumber) values
 (1, 'Nicki', 'Hodgdon', '01453', '2512846098', '4485539789963790'),
@@ -96,28 +108,16 @@ INSERT INTO Employees(EmployeeID, FirstName, LastName, Title, DateHired, Age) va
 (9, 'Brad', 'Stevens', 'Analyst', '2017-04-12 09:53:56.223', 42),
 (10, 'Marcus', 'Smart', 'Accountant', '2012-04-22 09:53:56.223', 34);
 
-INSERT INTO Product(ProductID, IngredientID, ProductName, ProductCategory, ProductNumber) values
-(1, 1, 'Dark Angels', 12, 700),
-(2, 2, 'Mask of Managmity',3, 234),
-(3, 3, 'Ocean Salt', 12, 765),
-(4, 4, 'Ocean Salt', 12, 765),
-(5, 5, 'Ocean Salt', 12, 765),
-(6, 6, 'Ugai Mouthwash Tab', 5, 127),
-(7, 7, 'Oatafix', 3, 07964210),
-(8, 8, 'Beautiful Day Shower Gel', 1, 564),
-(9, 9, 'Charity Pot Lotion', 2, 340),
-(10, 10, 'Hottie Body Bar', 3, 120);
-
-INSERT INTO Ingredients(IngredientID, IngredientsName, Supplier, Price) values
-(1, 'Coconut_Oil', 'CocoMart', 0.80),
-(2, 'Olive_Oil', 'OliveHeaven', 0.70),
-(3, 'Palm_Oil', 'PalmEmporium', 0.93),
-(4, 'Shea_Butter', 'SheaValue', 0.43),
-(5, 'Almond_Butter', 'AlmondNutz', 0.23),
-(6, 'Vanilla', 'VanillaCity', 0.17),
-(7, 'Sodium_Hydroxide', 'Chemixx', 0.02),
-(8, 'Sugar', 'SweetDeal', 0.12),
-(9, 'Cactus', 'Spikebucks', 0.66),
-(10, 'Magic', 'GrandIllusion', 0.88);
+INSERT INTO Sales(SaleID, CustomerID, EmployeeID, ProductID, SalesTotal, SaleDate, OrderQuantity) values
+(1, 1, 1, 1, 32, '2016-03-04 08:43:12.000', 4),
+(2, 2, 2, 2, 240, '2017-05-12 08:43:12.000', 12), 
+(3, 3, NULL, 3, 402, '2018-01-20 08:43:12.000', 13),
+(4, 4, 4, 4, 4202, '2018-03-10 08:43:12.000', 2),
+(5, 5, NULL, 5, 124, '2018-03-10 08:43:12.000', 3),
+(6, 6, NULL, 6, 231, '2018-03-10 08:43:12.000',1),
+(7, 7, 7, 7, 134, '2018-03-10 08:43:12.000', 5),
+(8, 8, NULL, 8, 53, '2018-03-10 08:43:12.000', 2),
+(9, 9, NULL, 9, 121, '2018-03-10 08:43:12.000', 3),
+(10, 10, NULL, 10, 147, '2018-03-10 08:43:12.000', 4);
 
 GO
