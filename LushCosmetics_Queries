@@ -15,3 +15,9 @@ FROM LushCosmeticsDB.Product
 
 SELECT IngredientID, IngredientsName, Supplier, Price
 FROM LushCosmeticsDB.Ingredients 
+
+
+/* Query 2 */
+
+SELECT SUM(SalesTotal) AS TotalSales 
+FROM LushCosmeticsDB.Sales;
