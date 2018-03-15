@@ -22,10 +22,11 @@ FROM Ingredients
 SELECT SUM(SalesTotal) AS TotalSales 
 FROM Sales;
 
-/*Query 3*/
-SELECT a.SalesTotal, a.SaleID, a.SaleDate, b.FirstName , b.LastName
-FROM Sales as a INNER JOIN Employees as b
-ON a.EmployeeID = b.EmployeeID;
+/* Query 3 - Which product(s) have the ingredient olive oil*/
+SELECT a.ProductName, b.IngredientsName
+FROM Product as a INNER JOIN Ingredients as b
+ON a.IngredientID = b.IngredientID
+WHERE b.IngredientsName = 'Olive_Oil'; 
 
 
 /* Query 4 - Show Employee Name that made sales greater than $200*/
