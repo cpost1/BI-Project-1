@@ -1,7 +1,7 @@
 /* Lush Cosmetics: Chris Post, Alexis Cohen, Pierre Moutschen */
 USE LushCosmeticsDB; 
 
-/* Select Query for each table */
+/* Query 1 - Select Query for each table */
 SELECT SaleID, CustomerID, EmployeeID, ProductID, SalesTotal, SaleDate, OrderQuantity 
 FROM Sales
 
@@ -17,7 +17,6 @@ FROM Product
 SELECT IngredientID, IngredientsName, Supplier, Price
 FROM Ingredients 
 
-
 /* Query 2 - Show the sum of all the sales made*/
 
 SELECT SUM(SalesTotal) AS TotalSales 
@@ -29,23 +28,20 @@ FROM Product as a INNER JOIN Ingredients as b
 ON a.IngredientID = b.IngredientID
 WHERE b.IngredientsName = 'Olive_Oil'; 
 
-
-/* Query 4 - Show Employee Name that made sales greater than $200*/
-SELECT Employees.FirstName, Employees.LastName
-FROM Employees
-WHERE EmployeeID IN (SELECT SaleID
-                       FROM Sales 
-                      WHERE Sales.SalesTotal > 200 );
-;
-
-
-/*Finding out which sales have made with a sales representative.
+/* Query 4 - Finding out which sales have made with a sales representative.
 Left outer join is used to pull date entries where EmployeeID is not null in the sales table*/
-
 
 SELECT Sales.SaleID
 	,Sales.SalesTotal
 FROM  Employees
 	left outer join Sales
 	on  Employees.EmployeeID = Sales.EmployeeID 
+;
+
+/* Query 5 - Show Employee Name that made sales greater than $200*/
+SELECT Employees.FirstName, Employees.LastName
+FROM Employees
+WHERE EmployeeID IN (SELECT SaleID
+                       FROM Sales 
+                      WHERE Sales.SalesTotal > 200 );
 ;
