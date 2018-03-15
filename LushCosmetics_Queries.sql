@@ -1,6 +1,33 @@
-/* Lush Cosmetics: Chris Post, Alexis Cohen, Pierre Moutschen */
+
 USE LushCosmeticsDB; 
 
+SELECT SaleID, CustomerID, EmployeeID, ProductID, SalesTotal, SaleDate, OrderQuantity 
+FROM Sales
+
+SELECT CustomerID, FirstName, LastName, CustomerAddress, PhoneNumber, CreditCardNumber
+FROM Customers
+
+SELECT EmployeeID, FirstName, LastName, Title, DateHired, Age
+FROM Employees
+
+SELECT ProductID, ProductName, IngredientID, ProductCategory, ProductNumber
+FROM Product
+
+SELECT IngredientID, IngredientsName, Supplier, Price
+FROM Ingredients 
+
+
+/* Query 2 */
+
+SELECT SUM(SalesTotal) AS TotalSales 
+FROM LushCosmeticsDB.Sales;
+
+/*Query 3*/
+SELECT a.SalesTotal, a.SaleID, a.SaleDate, b.FirstName , b.LastName
+FROM Sales as a INNER JOIN Employees as b
+ON a.EmployeeID = b.EmployeeID;
+
+/*Query 4*/
 SELECT *
 FROM Sales;
 
