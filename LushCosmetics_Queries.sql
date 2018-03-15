@@ -17,31 +17,24 @@ SELECT IngredientID, IngredientsName, Supplier, Price
 FROM Ingredients 
 
 
-/* Query 2 */
+/* Query 2 - Show the sum of all the sales made*/
 
 SELECT SUM(SalesTotal) AS TotalSales 
-FROM LushCosmeticsDB.Sales;
+FROM Sales;
 
 /*Query 3*/
 SELECT a.SalesTotal, a.SaleID, a.SaleDate, b.FirstName , b.LastName
 FROM Sales as a INNER JOIN Employees as b
 ON a.EmployeeID = b.EmployeeID;
 
-/*Query 4*/
-SELECT *
-FROM Sales;
 
-SELECT *
-FROM Customers;
-
-SELECT *
-FROM Employees;
-
-SELECT *
-FROM Product;
-
-SELECT *
-FROM Ingredients;
+/* Query 4 - Show Employee Name that made sales greater than $200*/
+SELECT Employees.FirstName, Employees.LastName
+FROM Employees
+WHERE EmployeeID IN (SELECT SaleID
+                       FROM Sales 
+                      WHERE Sales.SalesTotal > 200 );
+;
 
 
 /*Finding out which sales have made with a sales representative.
