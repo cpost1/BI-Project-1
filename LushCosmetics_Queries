@@ -1,0 +1,17 @@
+
+USE LushCosmeticsDB; 
+
+SELECT SalesID, CustomerID, EmployeeID, ProductID, SalesTotal_float, SalesDate_datetime, OrderQuantity 
+FROM LushCosmeticsDB.Sales
+
+SELECT CustomerID, FirstName, LastName, CustomerAddress, PhoneNumber, CreditCardNumber
+FROM LushCosmeticsDB.Customers
+
+SELECT EmployeeID, FirstName, LastName, Title, DateHired_datetime, Age_tinyint
+FROM LushCosmeticsDB.Employee
+
+SELECT ProductID, ProductName, IngredientID, ProductCategory, ProductNumber
+FROM LushCosmeticsDB.Product
+
+SELECT IngredientID, IngredientsName, Supplier, Price_float
+FROM LushCosmeticsDB.Ingredients 
