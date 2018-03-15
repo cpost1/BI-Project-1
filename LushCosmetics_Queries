@@ -22,8 +22,9 @@ FROM Ingredients
 SELECT SUM(SalesTotal) AS TotalSales 
 FROM LushCosmeticsDB.Sales;
 
-/*Show by name how many sales each employee made on ____ date and the total*/
-SELECT a.SalesTotal, a.SalesID, a.SalesDate, b.FirstName , b.LastName
-FROM LushCosmeticsDB.Sales as a INNER JOIN LushCosmeticsDB.Employee as b
+/*Query 3*/
+SELECT a.SalesTotal, a.SaleID, a.SaleDate, b.FirstName , b.LastName
+FROM Sales as a INNER JOIN Employees as b
 ON a.EmployeeID = b.EmployeeID
-WHERE a.SalesDate = '8-3-2018'
+
+/*Query 4*/
