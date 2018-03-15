@@ -1,20 +1,20 @@
 
 USE LushCosmeticsDB; 
 
-SELECT SalesID, CustomerID, EmployeeID, ProductID, SalesTotal, SalesDate, OrderQuantity 
-FROM LushCosmeticsDB.Sales
+SELECT SaleID, CustomerID, EmployeeID, ProductID, SalesTotal, SaleDate, OrderQuantity 
+FROM Sales
 
 SELECT CustomerID, FirstName, LastName, CustomerAddress, PhoneNumber, CreditCardNumber
-FROM LushCosmeticsDB.Customers
+FROM Customers
 
 SELECT EmployeeID, FirstName, LastName, Title, DateHired, Age
-FROM LushCosmeticsDB.Employee
+FROM Employees
 
 SELECT ProductID, ProductName, IngredientID, ProductCategory, ProductNumber
-FROM LushCosmeticsDB.Product
+FROM Product
 
 SELECT IngredientID, IngredientsName, Supplier, Price
-FROM LushCosmeticsDB.Ingredients 
+FROM Ingredients 
 
 
 /* Query 2 */
