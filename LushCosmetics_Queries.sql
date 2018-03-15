@@ -1,4 +1,4 @@
-
+/* Lush Cosmetics: Chris Post, Alexis Cohen, Pierre Moutschen */
 USE LushCosmeticsDB; 
 
 SELECT SaleID, CustomerID, EmployeeID, ProductID, SalesTotal, SaleDate, OrderQuantity 
