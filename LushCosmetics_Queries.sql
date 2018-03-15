@@ -1,6 +1,7 @@
 /* Lush Cosmetics: Chris Post, Alexis Cohen, Pierre Moutschen */
 USE LushCosmeticsDB; 
 
+/* Select Query for each table */
 SELECT SaleID, CustomerID, EmployeeID, ProductID, SalesTotal, SaleDate, OrderQuantity 
 FROM Sales
 
@@ -40,6 +41,8 @@ WHERE EmployeeID IN (SELECT SaleID
 
 /*Finding out which sales have made with a sales representative.
 Left outer join is used to pull date entries where EmployeeID is not null in the sales table*/
+
+
 SELECT Sales.SaleID
 	,Sales.SalesTotal
 FROM  Employees
